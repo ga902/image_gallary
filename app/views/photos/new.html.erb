@@ -1,0 +1,6 @@
+<%= form_with(model: [@album, @photo], local: true) do |f| %>
+  <%= f.text_field :title, placeholder: 'Enter Photo title here' %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :album_id %>
+  <%= f.submit "Post" %>
+<% end %>

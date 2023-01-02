@@ -1,0 +1,13 @@
+<h3>
+  <%= link_to album.name, album %>
+  <% if (album.user==current_user) %>
+     <%= link_to "delete", album, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+  <% if album.user == current_user %>
+    <%= link_to "Edit", edit_album_path(album), method: :get %>
+  <% end %>
+
+  
+  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+  </h3>
